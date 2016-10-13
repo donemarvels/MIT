@@ -1,0 +1,15 @@
+http://datainfo.duapp.com/shopdata/datainfo.html
+
+
+
+微信场景链接：：http://www.zhichiwangluo.com/index.php?r=InvitationEdit/usercenter&union_id=10960&from=singlemessage&isappinstalled=0#tab2
+
+
+
+
+swiper的官网：http://www.swiper.com.cn/usage/animate/index.html
+
+
+http://www.cnblogs.com/xxcanghai/p/5189353.html
+
+phoneGap::https://github.com/phonegap/phonegap-app-desktop/releases
