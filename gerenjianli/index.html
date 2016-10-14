@@ -12,36 +12,45 @@
 <link rel="stylesheet" href="js/swiper-3.3.1.min.css">
 </head>
 <body>
+	<div class="adio">
+		<audio src="audio/1.mp3" autoplay class="adio_music"></audio>
+	</div>
+	<div class="yinyue"></div>
+		
 	<div class="swiper-container aa">
 		<div class="swiper-wrapper aa"> 
 			<div class="swiper-slide page_1 bb" >
 				<div class="head">
-					<img src="img/2.png" alt="" class="head_img" />
+					<img src="img/2.png" alt="" class="head_img xuan"/>
 				</div>
-				<div class="hi">
-					<font face="Microsoft YaHei" color="#ffffff" style="font-size: 1.2rem;">HI!</font>
+				<div class="hi ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.3s">
+					<font face="Microsoft YaHei" color="#ffffff" style="font-size: 1.4rem;">HI!</font>
 				</div>
 				<div class="head_tou">
-					<img src="img/1.jpg" alt="" class="tou_img" />
+					<img src="img/1.jpg" alt="" class="tou_img ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.7s"/>
 				</div>
-				<div class="name">
-					<font face="Microsoft YaHei" color="#ffffff" style="font-size: 0.6rem;">
+				<div class="name ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2.4s">
+					<font face="Microsoft YaHei" color="#ffffff" style="font-size: 0.8rem;">
 						我叫
 						<b>苗棒</b>
 					</font>
 				</div>
-				<div class="name_cont">
-					<font face="Microsoft YaHei" color="#ffffff" style="font-size: 0.6rem;">
+				<div class="name_cont ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.3s">
+					<font face="Microsoft YaHei" color="#ffffff" style="font-size: 0.65rem;">
 						我正寻找一份前端工程师工作
 					</font>
 				</div>
+				<div class="dibu">
+				</div>
 			</div> 
-			<div class="swiper-slide page_2 bb">Slide 2</div> 
-			<div class="swiper-slide page_3 bb">Slide 3</div> 
-		</div> 
+			<div class="swiper-slide page_2 bb"></div> 
+			<div class="swiper-slide page_3 bb"></div> 
+		</div>
+
 	</div>
-</body>
+</body>,
 <script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/touch.js"></script>
 <script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
 <script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/rem.js"></script>
@@ -57,6 +66,7 @@
 		bodyScale();
 		var mySwiper = new Swiper ('.swiper-container', { 
 			direction: 'vertical', 
+
 			onInit: function(swiper){ 
 				//Swiper2.x的初始化是onFirstInit
 			    swiperAnimateCache(swiper); //隐藏动画元素 
@@ -65,12 +75,28 @@
 		 		onSlideChangeEnd: function(swiper){ 
 		    	swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
 		  	} 
+		})
+		$(function(){
+			var tag=true;
+			$(".yinyue").on("tap",function(){
+				if(tag==true){
+					$(".adio_music").get(0).pause();
+					$(".adio").get(0).style.backgroundPosition="right center";
+					$(".yinyue").css("background","none");
+					$(".adio").get(0).style.webkitAnimationPlayState="paused";
+					tag=false;
+				}else{
+					$(".adio_music").get(0).play();
+					$(".adio").get(0).style.backgroundPosition="left center";
+					$(".yinyue").css("background","url(img/1.gif) transparent no-repeat center center");
+					$(".adio").get(0).style.webkitAnimationPlayState="running";
+					tag=true;
+				}
+			})
 		}) 
+
 	}
-
-		
-	</script>
-
+	
 
 </script>
 </html>
