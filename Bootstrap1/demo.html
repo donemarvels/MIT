@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="bootstrap.min.css"/>
+<style>
+	*{margin:0;padding: 0;}
+	.container{
+		border: 1px solid red;
+	}
+	
+	/*.container-fluid{
+		border:1px solid yellow;
+	}*/
+	[class^=col-]{
+		border: 1px solid #000;
+	}
+</style>
+</head>
+<body>
+	<!-- <div class="container">
+		这是一个Bootstrap支持的网页
+		<a href="http://getbootstrap.com">bootstrap官网</a>
+		<p>测试数据</p>
+		<p>测试数据</p>
+		<p>测试数据</p>
+	</div>
+	<div class="container-fluid">
+		这是一个Bootstrap支持的网页
+		<a href="http://getbootstrap.com">bootstrap官网</a>
+		<p>测试数据</p>
+		<p>测试数据</p>
+		<p>测试数据</p>
+	</div> -->
+	<div class="container">
+		<div class="row">
+		
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+			<div class="col-sm-2 col-md-1">col-md-1</div>
+		</div>
+		<div class="row">
+		<!-- 桌面显示器 -->
+			<div class="col-md-8">col-md-8</div>
+			<div class="col-md-4">col-md-4</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">col-md-4</div>
+			<div class="col-md-4">col-md-4</div>
+			<div class="col-md-4">col-md-4</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">col-md-6</div>
+			<div class="col-md-6">col-md-6</div>
+		</div>
+		<!-- 列偏移 -->
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">offset3</div>
+		</div>
+		<!-- 列嵌套 -->
+		<div class="row">
+			<div class="col-md-8">
+				<div class="col-md-4">inner-4</div>
+				<div class="col-md-4">inner-4</div>
+				<div class="col-md-4">inner-4</div>
+			</div>
+			<div class="col-md-4">col-md-4</div>
+		</div>
+	</div>
+</body>
+</html>
